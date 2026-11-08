@@ -1,0 +1,9 @@
+[package]
+name = "batch"
+type = "bin"
+authors = ["MurkFun"]
+license = "MIT"
+compiler_version = ">=1.0.0"
+
+[dependencies]
+murk = { path = "../lib" }

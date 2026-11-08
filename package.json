@@ -1,0 +1,66 @@
+{
+  "name": "murkfun-holders",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Check MurkFun's holder set yourself: the Poseidon2 holder tree of SPACE ID Agent ID holders on BNB Smart Chain (MurkFunHolderRoots). Rebuild the tree from the chain, look up a holder with a verified Merkle path, audit the set against the registry, send fraud proofs and forced inclusions, and verify the deployed bytecode.",
+  "type": "module",
+  "license": "(MIT AND Apache-2.0)",
+  "homepage": "https://murk.fun/holders",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/murkfun/holder-roots.git"
+  },
+  "bugs": {
+    "url": "https://github.com/murkfun/holder-roots/issues"
+  },
+  "keywords": [
+    "murkfun",
+    "bsc",
+    "merkle-tree",
+    "poseidon2",
+    "zk",
+    "noir",
+    "space-id",
+    "agent-id",
+    "audit"
+  ],
+  "bin": {
+    "murkfun-holders": "src/cli.mjs"
+  },
+  "exports": {
+    ".": "./src/index.mjs",
+    "./tree": "./src/tree.mjs",
+    "./chain": "./src/chain.mjs",
+    "./lookup": "./src/lookup.mjs",
+    "./audit": "./src/audit.mjs",
+    "./registration": "./src/registration.mjs",
+    "./disputes": "./src/disputes.mjs",
+    "./network": "./src/network.mjs",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "scripts",
+    "contracts/src",
+    "contracts/lib",
+    "contracts/foundry.toml",
+    "contracts/bytecode.json",
+    "circuits",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE",
+    "LICENSES"
+  ],
+  "engines": {
+    "node": ">=20.11"
+  },
+  "scripts": {
+    "typecheck": "for f in src/*.mjs scripts/*.mjs test/*.mjs; do node --check \"$f\" || exit 1; done",
+    "test": "node --test --test-reporter=spec test/*.test.mjs",
+    "verify-bytecode": "node scripts/verify-bytecode.mjs"
+  },
+  "dependencies": {
+    "@zkpassport/poseidon2": "0.6.2",
+    "viem": "2.45.3"
+  }
+}

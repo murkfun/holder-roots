@@ -1,0 +1,13 @@
+{
+  "_comment": "keccak256 of the runtime code without the CBOR metadata tail, immutables zeroed (scripts/verify-bytecode.mjs)",
+  "MurkFunHolderRoots": {
+    "address": "0xD59867DADC96202284Fa54d016C6d66a0adBaE24",
+    "runtimeSize": 13467,
+    "normalizedKeccak256": "0x8397b5fd525a083d60e41aa5207f923d38f0fb77d829ef343be4fc645061c475"
+  },
+  "BatchVerifier": {
+    "address": "0x3BA574b3d102800c3E08E2F978A4d802C15b8C9E",
+    "runtimeSize": 16896,
+    "normalizedKeccak256": "0xe70219ab242dd45a120ec054887123bb011c3cc4f1b7195fe9091de9b6574c0b"
+  }
+}
